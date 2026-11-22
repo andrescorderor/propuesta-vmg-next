@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Propuesta Técnica y Comercial — VMG NeXT Construction.</title>
+    <title>Technical &amp; Commercial Proposal — VMG NeXT Construction.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -70,7 +70,7 @@
       }
 
       /* ===================================================================
-         LEFT VERTICAL SIDEBAR (ÍNDICE VERTICAL A LA IZQUIERDA)
+         LEFT VERTICAL SIDEBAR (FIXED VERTICAL INDEX)
          =================================================================== */
       .left-rail {
         position: fixed;
@@ -117,7 +117,7 @@
         margin-top: 2px;
       }
 
-      /* Switcher Presentación / Documento MD */
+      /* Switcher Presentation / Document */
       .mode-switch {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -253,7 +253,7 @@
       }
 
       /* ===================================================================
-         MAIN CONTENT AREA (A LA DERECHA DEL ÍNDICE VERTICAL)
+         MAIN CONTENT AREA (TO THE RIGHT OF THE VERTICAL RAIL)
          =================================================================== */
       .deck-view,
       .formal-doc-wrapper {
@@ -382,7 +382,7 @@
         letter-spacing: 0.12em;
       }
       .hero-title {
-        font-size: clamp(3.2rem, 8.8vw, 7.6rem);
+        font-size: clamp(3.2rem, 8.2vw, 7.2rem);
         font-weight: 200;
         line-height: 0.88;
         letter-spacing: -0.05em;
@@ -653,7 +653,7 @@
       }
 
       /* ===================================================================
-         FORMAL PROPOSAL DOCUMENT (propuesta_comercial.md CON FORMATO)
+         FORMAL PROPOSAL DOCUMENT (propuesta_comercial.md FORMATTED)
          =================================================================== */
       .formal-doc-wrapper {
         display: none;
@@ -800,17 +800,6 @@
         color: var(--fg);
       }
 
-      .doc-quote {
-        margin: 10px 0 12px;
-        padding: 10px 16px;
-        border-left: 3px solid var(--primary);
-        background: rgba(231, 0, 0, 0.06);
-        border-radius: 0 8px 8px 0;
-        font-size: 0.88rem;
-        font-style: italic;
-        color: var(--fg);
-      }
-
       .doc-table {
         width: 100%;
         border-collapse: collapse;
@@ -882,39 +871,39 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- =================================================================== -->
-    <!-- ÍNDICE VERTICAL FIJO A LA IZQUIERDA -->
+    <!-- FIXED LEFT VERTICAL SIDEBAR -->
     <!-- =================================================================== -->
-    <aside class="left-rail" aria-label="Índice de la propuesta">
+    <aside class="left-rail" aria-label="Proposal Navigation">
       <div class="rail-top">
         <div class="brand-block">
           <a href="#s1" onclick="setDocMode(false)" class="brand">VMG NeXT<span>.</span></a>
-          <div class="brand-sub">Propuesta Comercial</div>
+          <div class="brand-sub">Commercial Proposal</div>
         </div>
 
-        <div class="mode-switch" role="tablist" aria-label="Cambiar vista">
+        <div class="mode-switch" role="tablist" aria-label="Switch View Mode">
           <button type="button" id="btnDeckMode" onclick="setDocMode(false)" class="mode-btn active">
-            Presentación
+            Presentation
           </button>
           <button type="button" id="btnDocMode" onclick="setDocMode(true)" class="mode-btn">
-            Documento
+            Document
           </button>
         </div>
 
-        <!-- Índice vertical para Modo Presentación -->
+        <!-- Vertical Index for Presentation Mode (7 Slides) -->
         <div id="deckIndex">
-          <div class="rail-nav-label">Láminas</div>
-          <nav class="rail-nav" aria-label="Láminas de la presentación">
+          <div class="rail-nav-label">Slides</div>
+          <nav class="rail-nav" aria-label="Presentation Slides">
             <a href="#s1" data-nav="0" class="rail-link active">
               <span class="rail-num">01</span>
-              <span>Portada</span>
+              <span>Cover</span>
             </a>
             <a href="#s2" data-nav="1" class="rail-link">
               <span class="rail-num">02</span>
-              <span>Auditoría &amp; Cloud $0</span>
+              <span>Audit &amp; $0 Cloud</span>
             </a>
             <a href="#s3" data-nav="2" class="rail-link">
               <span class="rail-num">03</span>
-              <span>Réplica 1:1 &amp; Obras</span>
+              <span>1:1 Replica &amp; Portfolio</span>
             </a>
             <a href="#s4" data-nav="3" class="rail-link">
               <span class="rail-num">04</span>
@@ -922,164 +911,164 @@
             </a>
             <a href="#s5" data-nav="4" class="rail-link">
               <span class="rail-num">05</span>
-              <span>API Leads &amp; Stack</span>
+              <span>Estimating API &amp; Stack</span>
             </a>
             <a href="#s6" data-nav="5" class="rail-link">
               <span class="rail-num">06</span>
-              <span>Entrega (4 Sem)</span>
+              <span>Delivery (4 Wks)</span>
             </a>
             <a href="#s7" data-nav="6" class="rail-link">
               <span class="rail-num">07</span>
-              <span>Inversión</span>
+              <span>Investment</span>
             </a>
           </nav>
         </div>
 
-        <!-- Índice vertical para Modo Documento Formal -->
+        <!-- Vertical Index for Formal Document Mode -->
         <div id="docIndex" style="display: none">
-          <div class="rail-nav-label">Secciones</div>
-          <nav class="rail-nav" aria-label="Secciones del documento">
-            <a href="#d1" class="rail-link"><span class="rail-num">01</span><span>Auditoría &amp; Resumen</span></a>
-            <a href="#d2" class="rail-link"><span class="rail-num">02</span><span>Réplica 1:1 &amp; Obras</span></a>
+          <div class="rail-nav-label">Sections</div>
+          <nav class="rail-nav" aria-label="Document Sections">
+            <a href="#d1" class="rail-link"><span class="rail-num">01</span><span>Audit &amp; Summary</span></a>
+            <a href="#d2" class="rail-link"><span class="rail-num">02</span><span>1:1 Visual Replica</span></a>
             <a href="#d3" class="rail-link"><span class="rail-num">03</span><span>AI Blog Auto-Publisher</span></a>
-            <a href="#d4" class="rail-link"><span class="rail-num">04</span><span>Gestor Team 360°</span></a>
-            <a href="#d5" class="rail-link"><span class="rail-num">05</span><span>API Estimaciones</span></a>
-            <a href="#d6" class="rail-link"><span class="rail-num">06</span><span>Arquitectura $0</span></a>
-            <a href="#d7" class="rail-link"><span class="rail-num">07</span><span>Cronograma</span></a>
-            <a href="#d8" class="rail-link"><span class="rail-num">08</span><span>Inversión &amp; Pagos</span></a>
+            <a href="#d4" class="rail-link"><span class="rail-num">04</span><span>Team 360° CMS</span></a>
+            <a href="#d5" class="rail-link"><span class="rail-num">05</span><span>Estimating API</span></a>
+            <a href="#d6" class="rail-link"><span class="rail-num">06</span><span>$0 Cloud Architecture</span></a>
+            <a href="#d7" class="rail-link"><span class="rail-num">07</span><span>4-Week Timeline</span></a>
+            <a href="#d8" class="rail-link"><span class="rail-num">08</span><span>Investment &amp; Terms</span></a>
           </nav>
         </div>
       </div>
 
       <div class="rail-bottom">
         <div class="rail-controls" id="slideControls">
-          <button type="button" class="ctrl-btn" onclick="stepSlide(-1)" title="Anterior (↑ / ←)">←</button>
+          <button type="button" class="ctrl-btn" onclick="stepSlide(-1)" title="Previous Slide (↑ / ←)">←</button>
           <span class="slide-counter" id="slideCounter">01 / 07</span>
-          <button type="button" class="ctrl-btn" onclick="stepSlide(1)" title="Siguiente (↓ / →)">→</button>
-          <button type="button" class="ctrl-btn" onclick="toggleFull()" title="Pantalla completa">⛶</button>
+          <button type="button" class="ctrl-btn" onclick="stepSlide(1)" title="Next Slide (↓ / →)">→</button>
+          <button type="button" class="ctrl-btn" onclick="toggleFull()" title="Fullscreen">⛶</button>
         </div>
 
         <a href="https://andrescorderor.github.io/vmg-next-platform/" target="_blank" rel="noopener noreferrer" class="btn-demo">
-          Ver Demo en Vivo ↗
+          View Live Demo ↗
         </a>
       </div>
     </aside>
 
     <!-- =================================================================== -->
-    <!-- VISTA 1: PRESENTACIÓN VISUAL (7 LÁMINAS CONCISAS) -->
+    <!-- VIEW 1: VISUAL PRESENTATION (7 CONCISE SLIDES) -->
     <!-- =================================================================== -->
     <main class="deck-view">
-      <!-- LÁMINA 01: PORTADA -->
+      <!-- SLIDE 01: COVER -->
       <section id="s1" class="slide slide-hero">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
           <div class="telemetry-strip">
-            <span>Propuesta Técnica &amp; Comercial</span>
-            <span>Cliente · VMG NeXT Construction</span>
+            <span>Technical &amp; Commercial Proposal</span>
+            <span>Client · VMG NeXT Construction</span>
             <span>Sandy · Salt Lake City · Park City, UT</span>
             <span style="text-align: right">40°37′N · 111°51′W</span>
           </div>
 
           <div style="margin: auto 0; padding: 28px 0">
-            <span class="badge dark-badge">Reingeniería Full-Stack + AI Blog Studio + Team 360° CMS</span>
+            <span class="badge dark-badge">Full-Stack Rebuild + AI Blog Auto-Publisher + Team 360° CMS</span>
             <h1 class="hero-title">
-              Nueva Plataforma <em>&amp;</em><br />Autonomía con IA.
+              Next-Gen Platform <em>&amp;</em><br />AI Autonomy.
             </h1>
-            <p style="max-width: 620px; font-size: 1.15rem; color: #e6e3de; font-weight: 300">
-              Réplica 1:1 superada de <strong>vmgnext.com</strong> con redacción y publicación automática de blogs con IA, gestión visual del equipo sin tocar código y <strong>$0 USD / mes</strong> en servidores.
+            <p style="max-width: 660px; font-size: 1.15rem; color: #e6e3de; font-weight: 300">
+              Exact 1:1 visual replica of <strong>vmgnext.com</strong> upgraded with prompt-to-publish AI blogging, visual Team 360° management without touching code, Estimating Software API sync, and <strong>$0 USD / month</strong> in hosting fees.
             </p>
           </div>
 
           <div class="hero-kpi-bar">
             <div class="hero-kpi">
-              <div class="hero-kpi-val">$0 USD / mes</div>
-              <div class="hero-kpi-lbl">Reemplaza hosting SiteGround</div>
+              <div class="hero-kpi-val">$0 USD / mo</div>
+              <div class="hero-kpi-lbl">Eliminates SiteGround Hosting</div>
             </div>
             <div class="hero-kpi">
               <div class="hero-kpi-val">AI Blog Studio</div>
-              <div class="hero-kpi-lbl">Prompt → Artículo SEO Publicado</div>
+              <div class="hero-kpi-lbl">Prompt → Auto-Published SEO Post</div>
             </div>
             <div class="hero-kpi">
               <div class="hero-kpi-val">Team CMS 360°</div>
-              <div class="hero-kpi-lbl">Fotos, Bios y Ocultar en 1 Clic</div>
+              <div class="hero-kpi-lbl">Photos, Bios &amp; 1-Click Hide/Show</div>
             </div>
             <div class="hero-kpi">
-              <div class="hero-kpi-val">API Leads</div>
-              <div class="hero-kpi-lbl">Conectado a Software ocv1_...</div>
+              <div class="hero-kpi-val">Estimating API</div>
+              <div class="hero-kpi-lbl">Direct Sync with Key ocv1_...</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- LÁMINA 02: AUDITORÍA DE SITIO ACTUAL & INFRAESTRUCTURA $0 USD -->
+      <!-- SLIDE 02: AUDIT OF CURRENT SITE & $0 CLOUD INFRASTRUCTURE -->
       <section id="s2" class="slide">
         <div class="container">
           <div class="slide-header">
             <div>
-              <p class="eyebrow">01 — Auditoría Profunda de WordPress vs. Nueva Arquitectura</p>
-              <h2 class="section-title">Más rápido, seguro <em>&amp;</em> costo cero<span class="dot">.</span></h2>
+              <p class="eyebrow">01 — Deep WordPress Audit vs. Modern Cloud Architecture</p>
+              <h2 class="section-title">Faster, immune to hacks <em>&amp;</em> $0 hosting<span class="dot">.</span></h2>
             </div>
             <p class="header-sub">
-              Elimina de raíz las inyecciones PHP (<code>updater.php</code>), los comentarios HTML rotos y las rentas de servidor.
+              Eliminates PHP backdoors (<code>updater.php</code>), fragile raw HTML comments, and annual server bills permanently.
             </p>
           </div>
 
           <div class="grid-12">
             <div class="stat-card dark col-3">
-              <span class="badge dark-badge">Ahorro Directo</span>
+              <span class="badge dark-badge">Direct Cost Savings</span>
               <div class="big-stat">$0 USD</div>
-              <div class="stat-title">Hosting &amp; BD Mensual</div>
-              <p class="stat-desc">Elimina ~$360–$600 USD/año de SiteGround usando Google Firebase Spark y GitHub Edge CDN.</p>
+              <div class="stat-title">Monthly Hosting &amp; DB</div>
+              <p class="stat-desc">Eliminates ~$360–$600 USD/yr in SiteGround fees using Google Firebase Spark and GitHub Edge CDN.</p>
             </div>
 
             <div class="stat-card col-3">
-              <span class="badge">Seguridad Blindada</span>
+              <span class="badge">Hardened Security</span>
               <div class="big-stat">0% PHP</div>
-              <div class="stat-title">Inmune a Backdoors</div>
-              <p class="stat-desc">Erradica para siempre la vulnerabilidad del script malicioso <code>updater.php</code> en <code>header.php</code>.</p>
+              <div class="stat-title">Immune to PHP Backdoors</div>
+              <p class="stat-desc">Permanently eradicates the self-healing <code>updater.php</code> malware vulnerability in <code>header.php</code>.</p>
             </div>
 
             <div class="stat-card col-3">
-              <span class="badge">Cero Fricción</span>
-              <div class="big-stat">1 Clic</div>
-              <div class="stat-title">Sin Romper Código HTML</div>
-              <p class="stat-desc">Se acabó editar <code>Swiper</code> en crudo o purgar <code>SG Cache</code> para ocultar o agregar integrantes.</p>
+              <span class="badge">Zero Friction</span>
+              <div class="big-stat">1 Click</div>
+              <div class="stat-title">No More Raw HTML Edits</div>
+              <p class="stat-desc">No more editing raw <code>Swiper</code> HTML or flushing <code>SG Cache</code> to hide or add team members.</p>
             </div>
 
             <div class="stat-card col-3">
-              <span class="badge">Compresión WebP</span>
-              <div class="big-stat">+2,500</div>
-              <div class="stat-title">Fotos en la Nube Gratis</div>
-              <p class="stat-desc">Compresión automática en navegador (~150 KB/foto) para perfiles, blogs y galerías de proyectos.</p>
+              <span class="badge">WebP Compression</span>
+              <div class="big-stat">2,500+</div>
+              <div class="stat-title">High-Res Photos at $0</div>
+              <p class="stat-desc">Automated in-browser WebP compression (~150 KB/photo) for portraits, blogs, and project galleries.</p>
             </div>
 
             <div class="stat-card col-12" style="padding: 18px 22px; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap">
               <div style="display: flex; align-items: center; gap: 14px">
-                <span class="badge">Diagnóstico Resuelto</span>
-                <strong style="font-size: 0.92rem">Misma identidad visual que Melanie conoce, 10x más potente por dentro</strong>
+                <span class="badge">Audit Resolved</span>
+                <strong style="font-size: 0.92rem">Exact same visual design Melanie &amp; Victor love—10x more powerful under the hood</strong>
               </div>
               <div class="chip-list">
-                <span class="chip">✓ Sin plugins vulnerables</span>
-                <span class="chip">✓ Carga instantánea de videos y galerías</span>
-                <span class="chip">✓ SEO Schema.org automatizado</span>
+                <span class="chip">✓ Zero vulnerable plugins</span>
+                <span class="chip">✓ Instant video &amp; gallery loading</span>
+                <span class="chip">✓ Automated Schema.org JSON-LD SEO</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- LÁMINA 03: RÉPLICA 1:1 MEJORADA (PROYECTOS, RESTORATION & CAREERS) -->
+      <!-- SLIDE 03: 1:1 VISUAL REPLICA & PORTFOLIO (PROJECTS, RESTORATION & CAREERS) -->
       <section id="s3" class="slide" style="background: var(--card)">
         <div class="container">
           <div class="slide-header">
             <div>
-              <p class="eyebrow">02 — Réplica 1:1 Mejorada de Todas las Secciones</p>
-              <h2 class="section-title">Portafolio, Restoration <em>&amp;</em> Careers<span class="dot">.</span></h2>
+              <p class="eyebrow">02 — Exact 1:1 Visual Replica &amp; Upgraded Sections</p>
+              <h2 class="section-title">Portfolio, Restoration <em>&amp;</em> Careers<span class="dot">.</span></h2>
             </div>
             <p class="header-sub">
-              Todas las páginas actuales migradas con filtros interactivos, visor Lightbox y diseño Careers estilo Cardone Ventures.
+              All live pages migrated with original VMG NeXT stylesheets, interactive Lightbox, and Cardone-inspired Careers portal.
             </p>
           </div>
 
@@ -1087,16 +1076,16 @@
             <div class="col-7" style="display: flex; flex-direction: column; gap: 16px">
               <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px">
                 <div class="img-card" style="aspect-ratio: 4/5">
-                  <img src="https://vmgnext.com/wp-content/uploads/2026/08/project5_photo01-scaled.jpg" alt="8 Proyectos" />
+                  <img src="https://vmgnext.com/wp-content/uploads/2026/08/project5_photo01-scaled.jpg" alt="8 Projects" />
                   <div class="img-card-overlay">
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--primary-on-dark)">$30K – $5.5M</span>
-                    <strong style="font-size: 0.96rem; margin-top: 2px">8 Proyectos + Lightbox</strong>
+                    <strong style="font-size: 0.96rem; margin-top: 2px">8 Projects + Lightbox</strong>
                   </div>
                 </div>
                 <div class="img-card" style="aspect-ratio: 4/5">
                   <img src="https://vmgnext.com/wp-content/uploads/2026/02/Services_resto2.jpg" alt="Restoration Division" />
                   <div class="img-card-overlay">
-                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--primary-on-dark)">24 Fotos Reales</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--primary-on-dark)">29 Project Photos</span>
                     <strong style="font-size: 0.96rem; margin-top: 2px">Restoration Division</strong>
                   </div>
                 </div>
@@ -1104,7 +1093,7 @@
                   <img src="https://vmgnext.com/wp-content/uploads/2025/07/tilt-up.png" alt="Careers & Services" />
                   <div class="img-card-overlay">
                     <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--primary-on-dark)">Cardone Style</span>
-                    <strong style="font-size: 0.96rem; margin-top: 2px">Careers + Videos</strong>
+                    <strong style="font-size: 0.96rem; margin-top: 2px">Careers + 3 Videos</strong>
                   </div>
                 </div>
               </div>
@@ -1112,7 +1101,7 @@
               <div class="stat-card" style="padding: 16px 20px">
                 <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap">
                   <div>
-                    <span class="badge">9 Vistas Productivas Migradas</span>
+                    <span class="badge">All Production Pages Migrated 1:1</span>
                     <p style="font-size: 0.84rem; color: var(--body); margin-top: 6px">
                       <strong>Home · Services (7) · Projects (8) · About · Team (22) · Careers · Restoration · Blog · Contact</strong>
                     </p>
@@ -1123,78 +1112,78 @@
 
             <div class="stat-card dark col-5" style="justify-content: space-between">
               <div>
-                <span class="badge dark-badge">05 · Integración API Estimaciones</span>
+                <span class="badge dark-badge">05 · Estimating Software API Integration</span>
                 <h3 style="font-size: 1.4rem; font-weight: 500; margin-top: 10px; line-height: 1.15">
-                  Botón &ldquo;Request Consultation&rdquo; conectado a API Key <code>ocv1_...</code>
+                  &ldquo;Request Consultation&rdquo; Connected to API Key <code>ocv1_...</code>
                 </h3>
                 <p class="stat-desc" style="margin-top: 6px">
-                  Cumple el requerimiento del cliente: captura alcance constructivo y lo envía directo a su software de estimaciones.
+                  Captures concrete scope, square footage, and Utah project location, dispatching leads directly to your estimating pipeline.
                 </p>
               </div>
 
               <div style="background: #faf9f7; color: #18181c; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
                 <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--primary)">
-                  Flujo Automático de Preconstrucción
+                  Automated Preconstruction Lead Pipeline
                 </div>
                 <div style="background: #ffffff; border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; font-size: 0.78rem; color: var(--body)">
-                  1. Selección de Servicio (Tilt-Up, Slabs, Cast-In-Place...)
+                  1. Concrete Scope Selection (Tilt-Up, Slabs, Cast-In-Place...)
                 </div>
                 <div style="background: #ffffff; border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; font-size: 0.78rem; color: var(--body)">
-                  2. Área Estimada (SF), Presupuesto y Ubicación en Utah
+                  2. Estimated Area (SF), Concrete Budget Tier &amp; Utah Location
                 </div>
                 <div style="background: #ffffff; border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; font-size: 0.78rem; color: var(--body)">
-                  3. Despacho API (<code>ocv1_bBAB9M...</code>) + Respaldo en <code>/admin</code>
+                  3. API Dispatch (<code>ocv1_bBAB9M...</code>) + CRM Log in <code>/admin</code>
                 </div>
               </div>
 
               <p style="font-size: 0.72rem; color: #b8bdc4">
-                Incluye bandeja CRM en <code>/admin</code> para seguimiento de cotizaciones por Rene Villanueva.
+                Includes a dedicated Lead CRM inbox in <code>/admin</code> for Rene Villanueva and the estimating desk.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- LÁMINA 04: AI BLOG STUDIO & TEAM MEMBERS 360° -->
+      <!-- SLIDE 04: AI BLOG STUDIO & TEAM MEMBERS 360° -->
       <section id="s4" class="slide">
         <div class="container">
           <div class="slide-header">
             <div>
-              <p class="eyebrow">03 &amp; 04 — Panel Privado /admin con IA y Gestión de Equipo</p>
+              <p class="eyebrow">03 &amp; 04 — Private /admin Dashboard with AI &amp; Team Management</p>
               <h2 class="section-title">AI Blog Studio <em>&amp;</em> Team 360°<span class="dot">.</span></h2>
             </div>
             <p class="header-sub">
-              Ambos módulos están incluidos en el paquete base para darle autonomía inmediata a Melanie y Sophia.
+              Both core management tools are included in the Base Platform to give Melanie and Sophia immediate autonomy.
             </p>
           </div>
 
           <div class="grid-12">
             <div class="stat-card col-6" style="border-color: var(--primary); background: #ffffff">
               <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
-                <span class="badge">Incluido en Plataforma Base ($1,450 USD)</span>
+                <span class="badge">Included in Base Platform ($1,450 USD)</span>
                 <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--primary)">/admin → AI Blog</span>
               </div>
 
               <div>
                 <h3 style="font-size: 1.5rem; font-weight: 500; letter-spacing: -0.03em">
-                  De un Prompt a un Blog SEO Publicado Automáticamente
+                  From a Single Prompt to an Auto-Published SEO Blog Post
                 </h3>
                 <p class="stat-desc" style="margin-top: 6px">
-                  Escribe una idea o tema constructivo; la IA redacta títulos H2/H3, listas técnicas, keywords de Utah, asigna portada y <strong>lo publica en vivo en <code>/blog</code> en 1 clic</strong>.
+                  Type a short topic or prompt; the AI drafts H2/H3 headings, technical concrete bullet points, Utah SEO keywords, selects a cover photo, and <strong>publishes it live to <code>/blog</code> in 1 click</strong>.
                 </p>
               </div>
 
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; background: var(--card); padding: 14px; border-radius: 12px; border: 1px solid var(--border)">
                 <div>
-                  <strong style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary)">1. Gestión 360° del Equipo</strong>
+                  <strong style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary)">1. Team 360° Directory Manager</strong>
                   <p style="font-size: 0.78rem; color: var(--body); margin-top: 4px">
-                    Edita nombres, puestos, biografías, foto de tarjeta y retrato de detalle. Oculta o muestra perfiles en 1 clic.
+                    Edit names, titles, 2-paragraph biographies, card preview photos, and high-res bio portraits. Hide or show any member in 1 click.
                   </p>
                 </div>
                 <div>
-                  <strong style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary)">2. Posicionamiento en Utah</strong>
+                  <strong style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary)">2. Local Utah SEO Growth</strong>
                   <p style="font-size: 0.78rem; color: var(--body); margin-top: 4px">
-                    Artículos constantes indexados para captar General Contractors en Salt Lake City y Park City.
+                    Publish consistent commercial concrete articles indexed for General Contractors across Salt Lake City and Park City.
                   </p>
                 </div>
               </div>
@@ -1203,27 +1192,27 @@
             <div class="col-6" style="display: flex; flex-direction: column; gap: 12px">
               <div class="stat-card" style="padding: 16px 20px; flex-direction: row; align-items: center; justify-content: space-between">
                 <div>
-                  <span class="badge">Módulo Configurable 01</span>
-                  <h3 style="font-size: 1.08rem; font-weight: 500; margin-top: 4px">Gestor Dinámico de Proyectos &amp; Restoration</h3>
-                  <p class="stat-desc">Subir obras, presupuestos ($30K–$5.5M), SF, GC y galerías multi-foto desde <code>/admin</code>.</p>
+                  <span class="badge">Optional Module 01</span>
+                  <h3 style="font-size: 1.08rem; font-weight: 500; margin-top: 4px">Dynamic Projects &amp; Restoration Gallery Manager</h3>
+                  <p class="stat-desc">Upload new projects, concrete scope budgets ($30K–$5.5M), SF, GC, and multi-photo Lightbox galleries in <code>/admin</code>.</p>
                 </div>
                 <span class="mono-price" style="color: var(--primary); font-size: 0.92rem">+$350 USD</span>
               </div>
 
               <div class="stat-card" style="padding: 16px 20px; flex-direction: row; align-items: center; justify-content: space-between">
                 <div>
-                  <span class="badge">Módulo Configurable 02</span>
-                  <h3 style="font-size: 1.08rem; font-weight: 500; margin-top: 4px">Integración API Estimaciones (<code>ocv1_...</code>) &amp; CRM</h3>
-                  <p class="stat-desc">Conexión del botón <em>Request Consultation</em> con su software y bandeja de leads en <code>/admin</code>.</p>
+                  <span class="badge">Optional Module 02</span>
+                  <h3 style="font-size: 1.08rem; font-weight: 500; margin-top: 4px">Estimating Software API (<code>ocv1_...</code>) &amp; Lead CRM</h3>
+                  <p class="stat-desc">Connect all <em>Request Consultation</em> buttons to your estimating software API key + lead tracker in <code>/admin</code>.</p>
                 </div>
                 <span class="mono-price" style="color: var(--primary); font-size: 0.92rem">+$280 USD</span>
               </div>
 
               <div class="stat-card" style="padding: 16px 20px; flex-direction: row; align-items: center; justify-content: space-between">
                 <div>
-                  <span class="badge">Módulo Configurable 03</span>
-                  <h3 style="font-size: 1.08rem; font-weight: 500; margin-top: 4px">Portal Careers ATS &amp; Google Jobs Schema</h3>
-                  <p class="stat-desc">Inspirado en Cardone Ventures, videos testimoniales y gestión de vacantes en vivo.</p>
+                  <span class="badge">Optional Module 03</span>
+                  <h3 style="font-size: 1.08rem; font-weight: 500; margin-top: 4px">Careers ATS Portal &amp; Google Jobs Schema</h3>
+                  <p class="stat-desc">Cardone-inspired Careers page, vertical team video testimonials, and live job posting manager in <code>/admin</code>.</p>
                 </div>
                 <span class="mono-price" style="color: var(--primary); font-size: 0.92rem">+$220 USD</span>
               </div>
@@ -1232,49 +1221,49 @@
         </div>
       </section>
 
-      <!-- LÁMINA 05: ARQUITECTURA & STACK TECNOLÓGICO -->
+      <!-- SLIDE 05: ARCHITECTURE & TECHNOLOGY STACK -->
       <section id="s5" class="slide" style="background: var(--card)">
         <div class="container">
           <div class="slide-header">
             <div>
-              <p class="eyebrow">05 &amp; 06 — Ingeniería Moderna &amp; Despliegue GitHub</p>
-              <h2 class="section-title">Stack empresarial <em>&amp;</em> cero servidores<span class="dot">.</span></h2>
+              <p class="eyebrow">05 &amp; 06 — Modern Engineering &amp; GitHub Deployment</p>
+              <h2 class="section-title">Enterprise stack <em>&amp;</em> zero servers<span class="dot">.</span></h2>
             </div>
             <p class="header-sub">
-              Código limpio versionado en GitHub con despliegue continuo y respaldo en la nube de Google.
+              Clean version-controlled code on GitHub with continuous deployment and Google Cloud persistence.
             </p>
           </div>
 
           <div class="grid-12">
             <div class="stat-card col-4" style="background: #ffffff">
-              <span class="badge">01 · Frontend &amp; Velocidad</span>
+              <span class="badge">01 · Frontend &amp; 1:1 Fidelity</span>
               <div class="big-stat">React + TS</div>
-              <div class="stat-title">Arquitectura SPA Ultrarrápida</div>
+              <div class="stat-title">Ultra-Fast SPA + Original VMG CSS</div>
               <div class="chip-list" style="margin-top: 6px">
                 <span class="chip">React 19 + Vite</span>
                 <span class="chip">TypeScript</span>
-                <span class="chip">Tailwind CSS</span>
-                <span class="chip">Schema.org JSON-LD</span>
+                <span class="chip">Original VMG Theme CSS</span>
+                <span class="chip">Swiper 11 + Leaflet</span>
               </div>
             </div>
 
             <div class="stat-card dark col-4">
-              <span class="badge dark-badge">02 · Cloud &amp; Persistencia</span>
+              <span class="badge dark-badge">02 · Cloud &amp; Persistence</span>
               <div class="big-stat">Firebase</div>
-              <div class="stat-title">Plan Spark $0 USD Perpetuo</div>
+              <div class="stat-title">Perpetual $0 USD Spark Tier</div>
               <div class="chip-list" style="margin-top: 6px">
-                <span class="chip" style="background: rgba(255,255,255,0.08); border-color: #33363b; color: #fff">50K Lecturas / Día</span>
-                <span class="chip" style="background: rgba(255,255,255,0.08); border-color: #33363b; color: #fff">Compresión en Navegador</span>
-                <span class="chip" style="background: rgba(255,255,255,0.08); border-color: #33363b; color: #fff">SSL &amp; CDN Global</span>
+                <span class="chip" style="background: rgba(255,255,255,0.08); border-color: #33363b; color: #fff">50K Free Reads / Day</span>
+                <span class="chip" style="background: rgba(255,255,255,0.08); border-color: #33363b; color: #fff">In-Browser WebP Compression</span>
+                <span class="chip" style="background: rgba(255,255,255,0.08); border-color: #33363b; color: #fff">Global Edge CDN &amp; SSL</span>
               </div>
             </div>
 
             <div class="stat-card col-4" style="background: #ffffff">
-              <span class="badge">03 · IA &amp; Automatización</span>
+              <span class="badge">03 · AI &amp; Estimating Automation</span>
               <div class="big-stat">AI + API</div>
-              <div class="stat-title">Publicación y Leads en Tiempo Real</div>
+              <div class="stat-title">Real-Time Publishing &amp; Lead Sync</div>
               <div class="chip-list" style="margin-top: 6px">
-                <span class="chip">Motor IA Constructivo</span>
+                <span class="chip">Built-In Construction AI</span>
                 <span class="chip">Gemini API Ready</span>
                 <span class="chip">Bridge ocv1_...</span>
                 <span class="chip">GitHub CI/CD</span>
@@ -1284,119 +1273,119 @@
         </div>
       </section>
 
-      <!-- LÁMINA 06: CRONOGRAMA VISUAL (4 SEMANAS) -->
+      <!-- SLIDE 06: VISUAL TIMELINE (4 WEEKS) -->
       <section id="s6" class="slide">
         <div class="container">
           <div class="slide-header">
             <div>
-              <p class="eyebrow">07 — Metodología &amp; Entrega</p>
-              <h2 class="section-title">Transición limpia en <em>4 semanas</em><span class="dot">.</span></h2>
+              <p class="eyebrow">07 — Delivery Methodology &amp; Schedule</p>
+              <h2 class="section-title">Seamless rollout in <em>4 weeks</em><span class="dot">.</span></h2>
             </div>
             <p class="header-sub">
-              El prototipo funcional ya está desplegado en vivo; la puesta en producción sobre <code>vmgnext.com</code> se completa en 4 fases.
+              The functional prototype is already deployed live; production cutover on <code>vmgnext.com</code> is completed in 4 phases.
             </p>
           </div>
 
           <div class="timeline-grid">
             <div class="phase-card">
               <div class="phase-num">
-                <span>Fase 01</span>
-                <span class="phase-week">Semana 1</span>
+                <span>Phase 01</span>
+                <span class="phase-week">Week 1</span>
               </div>
               <div>
-                <h3>Réplica Visual 1:1 &amp; Core</h3>
-                <p style="margin-top: 8px">Migración de Home, Services, About, Contact, videos hero y activos de marca.</p>
+                <h3>1:1 Visual Replica &amp; Core</h3>
+                <p style="margin-top: 8px">Migration of Home, Services, About, Contact, hero videos, and original brand stylesheets.</p>
               </div>
-              <span class="badge">Completado en Demo</span>
+              <span class="badge">Completed in Live Demo</span>
             </div>
 
             <div class="phase-card">
               <div class="phase-num">
-                <span>Fase 02</span>
-                <span class="phase-week">Semana 2</span>
+                <span>Phase 02</span>
+                <span class="phase-week">Week 2</span>
               </div>
               <div>
-                <h3>Team 360° &amp; Portafolios</h3>
-                <p style="margin-top: 8px">Directorio de 22 perfiles dinámicos, 8 proyectos con Lightbox y galería Restoration.</p>
+                <h3>Team 360° &amp; Portfolios</h3>
+                <p style="margin-top: 8px">22 dynamic team profiles, 8 featured projects with 130+ photo Lightbox, and 29 Restoration photos.</p>
               </div>
-              <span class="badge">Completado en Demo</span>
+              <span class="badge">Completed in Live Demo</span>
             </div>
 
             <div class="phase-card">
               <div class="phase-num">
-                <span>Fase 03</span>
-                <span class="phase-week">Semana 3</span>
+                <span>Phase 03</span>
+                <span class="phase-week">Week 3</span>
               </div>
               <div>
-                <h3>AI Blog Studio &amp; API Leads</h3>
-                <p style="margin-top: 8px">Generador de blogs con IA auto-publicable, portal Careers y conexión <code>ocv1_...</code>.</p>
+                <h3>AI Blog Studio &amp; Estimating API</h3>
+                <p style="margin-top: 8px">Prompt-to-publish AI blog engine, Cardone-style Careers portal, and <code>ocv1_...</code> API sync.</p>
               </div>
-              <span class="badge">Semana 3</span>
+              <span class="badge">Week 3</span>
             </div>
 
             <div class="phase-card" style="border-color: var(--primary); background: #ffffff">
               <div class="phase-num">
-                <span>Fase 04</span>
-                <span class="phase-week" style="background: var(--primary)">Semana 4</span>
+                <span>Phase 04</span>
+                <span class="phase-week" style="background: var(--primary)">Week 4</span>
               </div>
               <div>
-                <h3>SEO Redirects &amp; Go-Live</h3>
-                <p style="margin-top: 8px">Mapeo de URLs para conservar SEO, conexión de dominio <code>vmgnext.com</code> y baja de SiteGround.</p>
+                <h3>SEO URL Preservation &amp; Go-Live</h3>
+                <p style="margin-top: 8px">URL mapping to preserve Google rankings, custom domain cutover on <code>vmgnext.com</code>, and SiteGround retirement.</p>
               </div>
-              <span class="badge">Semana 4 · Entrega</span>
+              <span class="badge">Week 4 · Go-Live</span>
             </div>
           </div>
 
           <div class="stat-card" style="margin-top: 18px; padding: 16px 22px; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap">
             <div style="display: flex; align-items: center; gap: 12px">
-              <span class="badge">Garantía Post-Lanzamiento</span>
-              <strong style="font-size: 0.9rem">3 semanas de soporte técnico, capacitación y ajustes menores incluidos.</strong>
+              <span class="badge">Post-Launch Warranty</span>
+              <strong style="font-size: 0.9rem">3 weeks of dedicated technical support, training, and fine-tuning included.</strong>
             </div>
             <span style="font-size: 0.78rem; color: var(--muted)">
-              *Incluye sesión de entrenamiento con Melanie y Sophia Galvan.
+              *Includes live onboarding session with Melanie and Sophia Galvan.
             </span>
           </div>
         </div>
       </section>
 
-      <!-- LÁMINA 07: INVERSIÓN INTERACTIVA & CONDICIONES -->
+      <!-- SLIDE 07: INTERACTIVE INVESTMENT CALCULATOR & TERMS -->
       <section id="s7" class="slide slide-dark">
         <div class="container">
           <div class="slide-header">
             <div>
-              <p class="eyebrow">08 — Propuesta Económica &amp; Condiciones</p>
-              <h2 class="section-title">Inversión modular <em>transparente</em><span class="dot">.</span></h2>
+              <p class="eyebrow">08 — Commercial Model &amp; Payment Terms</p>
+              <h2 class="section-title">Transparent modular <em>investment</em><span class="dot">.</span></h2>
             </div>
             <p class="header-sub">
-              Activa o desactiva los módulos opcionales para simular el alcance en tiempo real.
+              Toggle optional modules on or off to customize your scope and calculate the investment in real time.
             </p>
           </div>
 
           <div class="grid-12" style="align-items: start">
             <div class="col-7">
               <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--primary-on-dark); margin-bottom: 8px">
-                A. Plataforma Base + Team 360° CMS + AI Blog Auto-Publisher (Mínimo Requerido)
+                A. Base Platform + Team 360° CMS + AI Blog Auto-Publisher (Required Core)
               </p>
               <div class="module-toggle active" style="cursor: default; margin-bottom: 16px">
                 <div>
-                  <strong style="font-size: 0.98rem; color: #ffffff">Plataforma Web Base + Team 360° + AI Blog Studio</strong>
+                  <strong style="font-size: 0.98rem; color: #ffffff">Base Web Platform + Team 360° CMS + AI Blog Studio</strong>
                   <p style="font-size: 0.78rem; color: #d6d3cd; margin-top: 3px">
-                    Réplica 1:1 mejorada, Hosting Cloud $0/mes, Gestor completo de Team Members (fotos, bios, ocultar en 1 clic) y redacción/autopublicación de Blogs con IA.
+                    Exact 1:1 visual replica, $0/mo Cloud Hosting, full Team Members 360° Manager (photos, bios, 1-click hide/show), and AI prompt-to-publish blog engine.
                   </p>
                 </div>
                 <span class="mono-price" style="color: #ffffff; font-size: 1rem">$1,450 USD</span>
               </div>
 
               <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--primary-on-dark); margin-bottom: 8px">
-                B. Módulos Configurables Opcionales (Autonomía y Automatización Total)
+                B. Optional Configurable Modules (Full Autonomy &amp; Commercial Automation)
               </p>
 
               <label class="module-toggle active" id="row-mod1">
                 <div style="display: flex; align-items: center; gap: 12px">
                   <input type="checkbox" checked onchange="recalcQuote()" id="mod1" data-price="350" />
                   <div>
-                    <strong style="color: #ffffff; font-size: 0.92rem">1. Gestor Dinámico de Proyectos &amp; Galería Restoration</strong>
-                    <p style="font-size: 0.76rem; color: #d6d3cd">Alta, edición, rangos de presupuesto, SF, GC, visor Lightbox y galería Restoration en <code>/admin</code>.</p>
+                    <strong style="color: #ffffff; font-size: 0.92rem">1. Dynamic Projects &amp; Restoration Gallery Manager</strong>
+                    <p style="font-size: 0.76rem; color: #d6d3cd">Add, edit, and manage projects ($30K–$5.5M), SF, GC, multi-photo Lightbox, and Restoration gallery in <code>/admin</code>.</p>
                   </div>
                 </div>
                 <span class="mono-price" style="color: var(--primary-on-dark)">+$350 USD</span>
@@ -1406,8 +1395,8 @@
                 <div style="display: flex; align-items: center; gap: 12px">
                   <input type="checkbox" checked onchange="recalcQuote()" id="mod2" data-price="280" />
                   <div>
-                    <strong style="color: #ffffff; font-size: 0.92rem">2. Integración API de Estimaciones (<code>ocv1_...</code>) &amp; CRM</strong>
-                    <p style="font-size: 0.76rem; color: #d6d3cd">Conexión del botón <em>Request Consultation</em> con su software de estimación y CRM en <code>/admin</code>.</p>
+                    <strong style="color: #ffffff; font-size: 0.92rem">2. Estimating Software API Integration (<code>ocv1_...</code>) &amp; CRM</strong>
+                    <p style="font-size: 0.76rem; color: #d6d3cd">Connect all <em>Request Consultation</em> buttons to your estimating software API key + Lead CRM in <code>/admin</code>.</p>
                   </div>
                 </div>
                 <span class="mono-price" style="color: var(--primary-on-dark)">+$280 USD</span>
@@ -1417,8 +1406,8 @@
                 <div style="display: flex; align-items: center; gap: 12px">
                   <input type="checkbox" checked onchange="recalcQuote()" id="mod3" data-price="220" />
                   <div>
-                    <strong style="color: #ffffff; font-size: 0.92rem">3. Portal Dinámico Careers ATS &amp; Google Jobs Schema</strong>
-                    <p style="font-size: 0.76rem; color: #d6d3cd">Diseño estilo Cardone Ventures, videos testimoniales y gestión de vacantes en <code>/admin</code>.</p>
+                    <strong style="color: #ffffff; font-size: 0.92rem">3. Dynamic Careers ATS Portal &amp; Google Jobs Schema</strong>
+                    <p style="font-size: 0.76rem; color: #d6d3cd">Cardone-inspired Careers layout, vertical team video testimonials, and job posting manager in <code>/admin</code>.</p>
                   </div>
                 </div>
                 <span class="mono-price" style="color: var(--primary-on-dark)">+$220 USD</span>
@@ -1427,37 +1416,37 @@
 
             <div class="quote-box col-5">
               <div style="display: flex; align-items: center; justify-content: space-between">
-                <span class="badge">Inversión Total</span>
-                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--muted)">Pago Único · Llave en Mano</span>
+                <span class="badge">Total Investment</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--muted)">One-Time · Turnkey Delivery</span>
               </div>
               <div class="quote-total" id="totalAmount">$2,300 USD</div>
               <p style="font-size: 0.78rem; color: var(--muted); font-weight: 500" id="packageLabel">
-                Proyecto Completo (Autonomía y Automatización Total)
+                Full Turnkey Suite (Complete Autonomy &amp; Automation)
               </p>
 
               <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
                 <div style="background: #ffffff; border: 1px solid var(--border); padding: 11px; border-radius: 12px">
-                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.64rem; text-transform: uppercase; color: var(--muted)">30% Anticipo</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.64rem; text-transform: uppercase; color: var(--muted)">30% Deposit</span>
                   <div style="font-size: 1.15rem; font-weight: 600; color: var(--fg); margin-top: 2px" id="anticipoAmount">$690 USD</div>
                 </div>
                 <div style="background: #ffffff; border: 1px solid var(--border); padding: 11px; border-radius: 12px">
-                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.64rem; text-transform: uppercase; color: var(--muted)">70% Contra Entrega</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.64rem; text-transform: uppercase; color: var(--muted)">70% Upon Delivery</span>
                   <div style="font-size: 1.15rem; font-weight: 600; color: var(--fg); margin-top: 2px" id="entregaAmount">$1,610 USD</div>
                 </div>
               </div>
 
               <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 7px; font-size: 0.76rem; color: var(--body)">
                 <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 5px">
-                  <span>Migración inicial incluida</span>
-                  <strong>22 perfiles + 8 obras + 24 fotos Resto</strong>
+                  <span>Initial Content Migration</span>
+                  <strong>22 Profiles + 8 Projects + 29 Resto Photos</strong>
                 </div>
                 <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 5px">
-                  <span>Servidores / Hosting / BD</span>
-                  <strong style="color: var(--primary)">$0 USD / mes (Ahorra SiteGround)</strong>
+                  <span>Servers / Hosting / Database</span>
+                  <strong style="color: var(--primary)">$0 USD / month (Replaces SiteGround)</strong>
                 </div>
                 <div style="display: flex; justify-content: space-between">
-                  <span>Dominio <code>vmgnext.com</code></span>
-                  <strong>Ya existente (0 costo extra)</strong>
+                  <span>Custom Domain <code>vmgnext.com</code></span>
+                  <strong>Existing Domain ($0 extra cost)</strong>
                 </div>
               </div>
             </div>
@@ -1467,9 +1456,9 @@
     </main>
 
     <!-- =================================================================== -->
-    <!-- VISTA 2: PROPUESTA ÍNTEGRA CON FORMATO (propuesta_comercial.md) -->
+    <!-- VIEW 2: FULL FORMATTED PROPOSAL DOCUMENT (propuesta_comercial.md) -->
     <!-- =================================================================== -->
-    <section class="formal-doc-wrapper" aria-label="Propuesta Técnica y Comercial con Formato">
+    <section class="formal-doc-wrapper" aria-label="Formatted Technical & Commercial Proposal">
       <article class="formal-sheet">
         <header class="doc-letterhead">
           <div>
@@ -1479,203 +1468,203 @@
             </p>
           </div>
           <div class="doc-meta-box">
-            <div>PROPUESTA TÉCNICA Y COMERCIAL</div>
-            <div>REINGENIERÍA FULL-STACK &amp; AI SUITE</div>
+            <div>TECHNICAL &amp; COMMERCIAL PROPOSAL</div>
+            <div>FULL-STACK REBUILD &amp; AI SUITE</div>
           </div>
         </header>
 
-        <h1 class="doc-h1">Propuesta Técnica y Comercial: Nueva Plataforma Digital, CMS &amp; AI Suite — VMG NeXT</h1>
+        <h1 class="doc-h1">Technical &amp; Commercial Proposal: Next-Generation Web Platform, Team 360° CMS &amp; AI Publishing Suite — VMG NeXT</h1>
 
         <div class="doc-meta-grid">
           <div class="doc-meta-item">
-            <small>Cliente</small>
+            <small>Client</small>
             <strong>VMG NeXT Construction (Melanie &amp; Victor Galvan)</strong>
           </div>
           <div class="doc-meta-item">
-            <small>Enfoque</small>
-            <strong>Migración desde cero, AI Blog Auto-Publisher, Team 360° y API Leads</strong>
+            <small>Scope</small>
+            <strong>1:1 Rebuild, AI Blog Auto-Publisher, Team 360° CMS &amp; Estimating API</strong>
           </div>
           <div class="doc-meta-item">
-            <small>Infraestructura Recurrente</small>
-            <strong class="accent">$0 USD / mes (Reemplaza Hosting SiteGround)</strong>
+            <small>Recurring Infrastructure</small>
+            <strong class="accent">$0 USD / month (Eliminates SiteGround Hosting)</strong>
           </div>
         </div>
 
-        <!-- 1. Resumen Ejecutivo y Auditoría -->
+        <!-- 1. Executive Summary & Audit -->
         <div class="doc-section" id="d1">
-          <h2 class="doc-h2">1. Resumen Ejecutivo y Auditoría del Sitio Actual (vmgnext.com)</h2>
+          <h2 class="doc-h2">1. Executive Summary &amp; Deep Audit of Current WordPress Site (vmgnext.com)</h2>
           <ul class="doc-list">
             <li>
-              <strong>Vulnerabilidad Crítica de Seguridad (Inyecciones PHP):</strong> Se detectó en la instalación actual de WordPress un script malicioso tipo <em>self-healing backdoor</em> (<code>updater.php</code> inyectado en <code>header.php</code>). Al migrar a una aplicación moderna compilada en <strong>React + TypeScript</strong> sin ejecución PHP en servidor, se elimina el 100% del riesgo de reinfección.
+              <strong>Critical PHP Security Vulnerability (<code>updater.php</code> Backdoor):</strong> Our audit identified a self-healing PHP backdoor injection in the current WordPress installation (<code>updater.php</code> injected inside <code>header.php</code>). Migrating to a compiled <strong>React 19 + TypeScript</strong> application with zero server-side PHP execution permanently eliminates 100% of PHP malware risks.
             </li>
             <li>
-              <strong>Fricción Operativa en Gestión de Equipo (<code>/team/</code>):</strong> En el WordPress actual, los miembros del equipo están <em>hardcodeados</em> en HTML dentro de un carrusel Swiper (Página ID 242) y sus biografías separadas en plantillas ACF. Ocultar o añadir personal (Savannah, Zachariah, Levi, Abner, Rene Villanueva, Eduardo Galvan) exige comentar HTML manualmente y purgar <code>SG Cache</code>.
+              <strong>High Operational Friction on Team Directory (<code>/team/</code>):</strong> In the current WordPress site, team cards are hardcoded inside raw Swiper HTML on Page ID <code>242</code> while member biographies live on separate ACF pages. Hiding or adding personnel (<em>Savannah, Zachariah, Levi, Valerie, Abner Palacios, Sophia Galvan, Rene Villanueva, Eduardo Galvan</em>) requires manually commenting out HTML and flushing <code>SG Cache</code>.
             </li>
             <li>
-              <strong>Publicación Lenta de Blogs (<code>/blog/</code>):</strong> Solo existen 3 artículos desde diciembre de 2025 por la complejidad manual de redacción y maquetación.
+              <strong>Slow &amp; Manual Blog Publishing (<code>/blog/</code>):</strong> Only 3 blog posts have been published since December 2025 due to manual writing and layout friction.
             </li>
             <li>
-              <strong>Reducción de Costos Fijos ($0 USD / mes):</strong> Elimina la renta anual de SiteGround (~$360–$600 USD/año) y los costos recurrentes de mantenimiento técnico por cambios menores.
+              <strong>Elimination of Fixed Hosting Costs ($0 USD / month):</strong> Replaces SiteGround annual managed hosting (~$360–$600 USD/year) and recurring developer fees for routine content updates.
             </li>
           </ul>
         </div>
 
-        <!-- 2. Réplica Visual 1:1 Mejorada -->
+        <!-- 2. Exact 1:1 Visual Replica -->
         <div class="doc-section" id="d2">
-          <h2 class="doc-h2">2. Réplica Visual 1:1 Mejorada y Activos Migrados</h2>
+          <h2 class="doc-h2">2. Exact 1:1 Visual Replica &amp; Migrated Brand Assets</h2>
           <ul class="doc-list">
-            <li><strong>Home &amp; Services (<code>/</code>, <code>/services</code>):</strong> Video Hero responsivo, métricas (220+ proyectos, 20+ años, 100% satisfacción), las 6 divisiones activas más <em>High-End Homes</em> activable en 1 clic, y los 8 testimonios reales.</li>
-            <li><strong>Projects Portfolio (<code>/projects</code>):</strong> Los 8 proyectos reales (<em>Tow/Plow Manila, Tabiona, Promontory Place, K&amp;B Apartments, Timpview High School $5M–$5.5M, Ogden 5 Light Bay, Canyon Creek Fairfield Inn y The Grove Buildings 1 &amp; 2</em>) con filtro por mercado, rangos presupuestales, <code>SF</code>, <code>GC</code> y visor Lightbox a pantalla completa.</li>
-            <li><strong>About Us &amp; Restoration Division (<code>/about-us</code>, <code>/restoration</code>):</strong> Misión, Visión ($125M / 360 integrantes), 6 valores y galería filtrable con las 24 fotos reales de restauración estructural.</li>
-            <li><strong>Careers inspirado en Cardone Ventures (<code>/careers</code>):</strong> Hero con video, KPIs de cultura, beneficios, vacantes abiertas con marcado para Google Jobs y los 3 videos testimoniales verticales (<em>Valerie, Victor y Scott</em>).</li>
+            <li><strong>Home &amp; Services (<code>/</code>, <code>/services</code>):</strong> Original VMG NeXT stylesheets, responsive desktop/mobile hero videos, animated counters (220+ projects, 20 years of expertise, 100% customer satisfaction), all 6 active concrete divisions plus <em>High-End Homes</em> toggleable in 1 click, and dual continuous testimonial carousels.</li>
+            <li><strong>Projects Portfolio (<code>/projects</code>):</strong> All 8 commercial concrete projects (<em>Tow/Plow Manila, Tow/Plow Tabiona, Promontory Place Apartments, K&amp;B Apartments, Timpview High School $5M–$5.5M, Ogden 5 Light Bay, Canyon Creek Fairfield Inn &amp; Suites, and The Grove Buildings 1 &amp; 2</em>) with budget ranges, <code>SF</code>, <code>GC</code>, and a 130+ photo full-screen Lightbox gallery.</li>
+            <li><strong>About Us &amp; Restoration Division (<code>/about-us</code>, <code>/restoration</code>):</strong> Brandon M. Dawson card, Mission &amp; Vision ($125M / 360 team members), 6 Core Values, and an interactive filterable Restoration Gallery with all 29 real restoration photos.</li>
+            <li><strong>Careers Portal Inspired by Cardone Ventures (<code>/careers</code>):</strong> Video hero, culture KPIs, 6 employee benefits, open positions with Google Jobs <code>JobPosting</code> Schema.org markup, direct resume dispatch to Yolanda Galvan, and the 3 vertical team video testimonials (<em>Valerie, Victor, and Scott</em>).</li>
           </ul>
         </div>
 
         <!-- 3. AI Blog Studio -->
         <div class="doc-section" id="d3">
-          <h2 class="doc-h2">3. Estudio de Blogs con IA &amp; Auto-Publisher (/admin → AI Blog Studio)</h2>
+          <h2 class="doc-h2">3. AI Blog Studio &amp; One-Click Auto-Publisher (/admin → AI Blog Studio)</h2>
           <ul class="doc-list">
-            <li><strong>De un Prompt a un Artículo Publicado en 1 Clic:</strong> Melanie o Sophia escriben una instrucción breve (ej. <em>&ldquo;Why Tilt-Up Concrete Reduces Winter Delays in Salt Lake City&rdquo;</em>), eligen tono y palabras clave, y la IA redacta el artículo completo con encabezados H2/H3, listas técnicas, cita ejecutiva, portada optimizada y <strong>lo publica automáticamente en <code>/blog</code></strong>.</li>
-            <li><strong>Motor Dual ($0 USD):</strong> Incluye motor constructivo especializado integrado sin costo y soporte opcional para llave gratuita de Google Gemini API.</li>
+            <li><strong>From a Prompt to a Published SEO Article in 1 Click:</strong> Melanie or Sophia enters a short prompt (e.g., <em>&ldquo;Why Tilt-Up Concrete Reduces Winter Construction Schedules for Salt Lake City Warehouses&rdquo;</em>), selects tone and Utah keywords, and the AI drafts the complete article with H2/H3 headings, technical bullet points, executive quote, cover image, and <strong>auto-publishes it live to <code>/blog</code></strong>.</li>
+            <li><strong>Dual $0 Engine:</strong> Includes a built-in commercial construction AI generator at $0 cost plus optional support for a free Google Gemini API key.</li>
           </ul>
         </div>
 
-        <!-- 4. Gestor 360° de Team Members -->
+        <!-- 4. Team Members 360° Manager -->
         <div class="doc-section" id="d4">
-          <h2 class="doc-h2">4. Gestor 360° de Team Members (/admin → Team Members)</h2>
+          <h2 class="doc-h2">4. Team Members 360° Manager (/admin → Team Members)</h2>
           <ul class="doc-list">
-            <li><strong>22 Perfiles Pre-Cargados (18 Activos + 4 Ocultos):</strong> Incluye a Victor Galvan, Yolanda Galvan, Mayra Gonzalez, Scott Longhurst, Abner Palacios (<em>Director of Special Projects</em>), Sophia Galvan (<em>Marketing Director</em>), Rene Villanueva (<em>Lead Estimator</em>) y Eduardo Galvan (<em>Assistant Project Manager</em>).</li>
-            <li><strong>Ocultar / Reactivar en 1 Clic:</strong> Los perfiles de Savannah, Zachariah, Levi y Valerie se conservan en la base de datos como <code>Hidden</code> para activarlos o archivarlos con un botón sin tocar código HTML.</li>
-            <li><strong>Carga de Fotos y Biografías:</strong> Subida directa de foto de tarjeta y retrato de detalle con compresión automática WebP en navegador, edición de biografía en 2 párrafos y reordenamiento prioritario.</li>
+            <li><strong>22 Pre-Loaded Profiles (18 Active + 4 Hidden):</strong> Includes Victor Galvan (CEO), Yolanda Galvan, Mayra Gonzalez, Scott Longhurst, Abner Palacios (<em>Director of Special Projects</em>), Sophia Galvan (<em>Marketing Director</em>), Rene Villanueva (<em>Lead Estimator</em>), and Eduardo Galvan (<em>Assistant Project Manager</em>).</li>
+            <li><strong>1-Click Hide / Show Toggle:</strong> Profiles for Savannah, Zachariah Maynard, Levi Palacios, and Valerie Diaz are preserved in the database as <code>Hidden</code> so they can be reactivated or archived with a single switch—without touching HTML code.</li>
+            <li><strong>Direct Photo &amp; Biography Editor:</strong> Upload both the Card Preview Photo and the High-Res Bio Portrait with automatic in-browser WebP compression, edit two-paragraph biographies, and reorder display priority.</li>
           </ul>
         </div>
 
-        <!-- 5. Integración API Estimaciones -->
+        <!-- 5. Estimating Software API -->
         <div class="doc-section" id="d5">
-          <h2 class="doc-h2">5. Integración con Software de Estimaciones (ocv1_...) y CRM de Leads</h2>
+          <h2 class="doc-h2">5. Estimating Software API Integration (ocv1_...) &amp; Lead CRM</h2>
           <ul class="doc-list">
-            <li><strong>Botón &ldquo;Request Consultation&rdquo; Conectado:</strong> Captura servicio requerido, pies cuadrados estimados (<code>SF</code>), presupuesto, ubicación en Utah y contacto, sincronizándolo con la API Key <code>ocv1_bBAB9MUQVzEagJKFYOmhIhwFItKDx3L0vvZlKgDTEs8=</code> y guardando el prospecto en la bandeja CRM de <code>/admin</code>.</li>
+            <li><strong>&ldquo;Request Consultation&rdquo; Connected to Estimating Pipeline:</strong> Captures concrete scope, estimated square footage (<code>SF</code>), budget tier, Utah project location, and contact details—syncing directly with API Key <code>ocv1_bBAB9MUQVzEagJKFYOmhIhwFItKDx3L0vvZlKgDTEs8=</code> and logging every lead in the <code>/admin</code> Lead CRM.</li>
           </ul>
         </div>
 
-        <!-- 6. Arquitectura Tecnológica -->
+        <!-- 6. Cloud Architecture -->
         <div class="doc-section" id="d6">
-          <h2 class="doc-h2">6. Arquitectura Tecnológica &amp; Cero Costos Cloud ($0 USD)</h2>
+          <h2 class="doc-h2">6. Technology Stack &amp; $0/Month Cloud Architecture</h2>
           <ul class="doc-list">
-            <li><strong>Frontend:</strong> React 19 + Vite + TypeScript + Tailwind CSS.</li>
-            <li><strong>Base de Datos &amp; Persistencia:</strong> Google Cloud Firestore y LocalStorage Sync (Plan Spark $0 USD perpetuo).</li>
-            <li><strong>Almacenamiento Multimedia ($0 USD):</strong> Compresión automática WebP en el navegador (~150 KB/foto).</li>
-            <li><strong>Hosting, Repositorio &amp; SSL:</strong> GitHub Repository + Edge CDN con certificado SSL incluido ($0 USD/mes).</li>
+            <li><strong>Frontend:</strong> React 19 + Vite + TypeScript + Original VMG NeXT Theme CSS &amp; Bootstrap 5.</li>
+            <li><strong>Database &amp; Persistence:</strong> Google Cloud Firestore + LocalStorage Sync (Perpetual $0 USD Spark Tier).</li>
+            <li><strong>Media Storage ($0 USD):</strong> Automated in-browser Canvas WebP compression (~150 KB/photo).</li>
+            <li><strong>Hosting, Repository &amp; SSL:</strong> GitHub Repository + Global Edge CDN with automated SSL ($0 USD/month).</li>
           </ul>
         </div>
 
-        <!-- 7. Metodología de Entrega y Cronograma -->
+        <!-- 7. Delivery Methodology & Timeline -->
         <div class="doc-section" id="d7">
-          <h2 class="doc-h2">7. Metodología de Entrega y Cronograma</h2>
+          <h2 class="doc-h2">7. Delivery Methodology &amp; 4-Week Schedule</h2>
           <table class="doc-table">
             <thead>
               <tr>
-                <th>Fase</th>
-                <th class="num-col">Duración</th>
-                <th>Entregables Clave</th>
+                <th>Phase</th>
+                <th class="num-col">Duration</th>
+                <th>Key Deliverables</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Fase 1: Migración Base y Réplica Visual 1:1</strong></td>
-                <td class="num-col">1 semana</td>
-                <td>Maquetación completa de Home, Services, About, Contact, Legal y activos multimedia.</td>
+                <td><strong>Phase 1: 1:1 Visual Replica &amp; Core Migration</strong></td>
+                <td class="num-col">1 Week</td>
+                <td>Full migration of Home, Services, About, Contact, Legal, hero videos, and original brand stylesheets.</td>
               </tr>
               <tr>
-                <td><strong>Fase 2: Directorio Team 360° y Portafolios</strong></td>
-                <td class="num-col">1 semana</td>
-                <td>Módulo <code>/team</code> y perfiles individuales dinámicos, <code>/projects</code> con Lightbox y <code>/restoration</code>.</td>
+                <td><strong>Phase 2: Team 360° Directory &amp; Project Galleries</strong></td>
+                <td class="num-col">1 Week</td>
+                <td>Dynamic <code>/team</code> carousel &amp; 22 individual bio pages, <code>/projects</code> with 130+ photo Lightbox, and <code>/restoration</code>.</td>
               </tr>
               <tr>
-                <td><strong>Fase 3: AI Blog Studio, Careers &amp; API Leads</strong></td>
-                <td class="num-col">1 semana</td>
-                <td>Panel <code>/admin</code> con generador de blogs con IA, portal <code>/careers</code> y conexión API <code>ocv1_...</code>.</td>
+                <td><strong>Phase 3: AI Blog Studio, Careers &amp; Estimating API</strong></td>
+                <td class="num-col">1 Week</td>
+                <td>Private <code>/admin</code> dashboard with AI blog auto-publisher, <code>/careers</code> portal, and <code>ocv1_...</code> API sync.</td>
               </tr>
               <tr>
-                <td><strong>Fase 4: Pruebas, SEO Redirects y Go-Live</strong></td>
-                <td class="num-col">1 semana</td>
-                <td>Conservación de URLs SEO, pruebas responsivas, cambio de DNS en <code>vmgnext.com</code> y entrega.</td>
+                <td><strong>Phase 4: QA, SEO URL Preservation &amp; Go-Live</strong></td>
+                <td class="num-col">1 Week</td>
+                <td>SEO URL redirect verification, responsive QA, custom domain DNS switch on <code>vmgnext.com</code>, and handover.</td>
               </tr>
               <tr class="total-row">
                 <td><strong>TOTAL</strong></td>
-                <td class="num-col" style="color: var(--primary)"><strong>4 semanas</strong></td>
-                <td><strong>Plataforma productiva llave en mano con $0 USD/mes en servidores.</strong></td>
+                <td class="num-col" style="color: var(--primary)"><strong>4 Weeks</strong></td>
+                <td><strong>Turnkey production platform with $0 USD/month in server costs.</strong></td>
               </tr>
             </tbody>
           </table>
           <ul class="doc-list">
             <li>
-              <strong>Garantía Post-Lanzamiento:</strong> 3 semanas de soporte técnico, capacitación para Melanie/Sophia y ajustes menores incluidos.
+              <strong>Post-Launch Warranty:</strong> 3 weeks of dedicated technical support, training session for Melanie &amp; Sophia Galvan, and minor adjustments included.
             </li>
           </ul>
         </div>
 
-        <!-- 8. Modelo Comercial, Inversión y Condiciones -->
+        <!-- 8. Commercial Model & Investment -->
         <div class="doc-section" id="d8">
-          <h2 class="doc-h2">8. Modelo Comercial, Inversión y Condiciones</h2>
+          <h2 class="doc-h2">8. Commercial Model, Modular Investment &amp; Payment Terms</h2>
 
-          <h3 class="doc-h3">A. Plataforma Base + Gestor Team 360° &amp; AI Blog Studio <em>(Mínimo Requerido)</em></h3>
+          <h3 class="doc-h3">A. Base Platform + Team 360° CMS &amp; AI Blog Studio <em>(Required Core)</em></h3>
           <table class="doc-table">
             <thead>
               <tr>
-                <th>Concepto</th>
-                <th>Alcance Técnico</th>
-                <th class="num-col">Inversión</th>
+                <th>Package</th>
+                <th>Technical Scope Included</th>
+                <th class="num-col">Investment</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Plataforma Web Base + Team CMS + AI Blog Studio</strong></td>
-                <td>Réplica 1:1 mejorada de <code>vmgnext.com</code>, arquitectura inmune a malware PHP, Hosting Cloud ($0 USD/mes), Gestor 360° de Team Members (fotos, biografías y ocultar/mostrar en 1 clic) y AI Blog Studio (autopublicación SEO desde un prompt).</td>
+                <td><strong>Base Web Platform + Team 360° CMS + AI Blog Studio</strong></td>
+                <td>Exact 1:1 visual replica of <code>vmgnext.com</code>, PHP-immune architecture, $0/month Cloud Hosting, Team Members 360° Manager (photos, bios, 1-click hide/show), and AI Blog Studio (prompt-to-published SEO articles in 1 click).</td>
                 <td class="num-col"><strong>$1,450 USD</strong></td>
               </tr>
             </tbody>
           </table>
 
-          <h3 class="doc-h3">B. Módulos Configurables Opcionales <em>(para Autonomía y Automatización Total)</em></h3>
+          <h3 class="doc-h3">B. Optional Configurable Modules <em>(For Full Autonomy &amp; Commercial Automation)</em></h3>
           <table class="doc-table">
             <thead>
               <tr>
-                <th>Módulo Adicional</th>
-                <th>Alcance Técnico</th>
-                <th class="num-col">Costo por Módulo</th>
+                <th>Optional Module</th>
+                <th>Technical Scope Included</th>
+                <th class="num-col">Module Price</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>1. Gestor Dinámico de Proyectos &amp; Galería Restoration</strong></td>
-                <td>Alta, edición, filtros por mercado, rangos de presupuesto (<code>$30K–$5.5M</code>), <code>SF</code>, <code>GC</code>, visor Lightbox y galería Restoration desde <code>/admin</code></td>
+                <td><strong>1. Dynamic Projects &amp; Restoration Gallery Manager</strong></td>
+                <td>Add, edit, filter by market, manage budget tiers (<code>$30K–$5.5M</code>), <code>SF</code>, <code>GC</code>, multi-photo Lightbox, and Restoration gallery from <code>/admin</code></td>
                 <td class="num-col">+$350 USD</td>
               </tr>
               <tr>
-                <td><strong>2. Integración API de Estimaciones (<code>ocv1_...</code>) &amp; CRM</strong></td>
-                <td>Conexión del botón <em>Request Consultation</em> con software de estimaciones vía API Key y CRM de prospectos en <code>/admin</code></td>
+                <td><strong>2. Estimating Software API Integration (<code>ocv1_...</code>) &amp; CRM</strong></td>
+                <td>Connect all <em>Request Consultation</em> buttons to estimating software via API Key + Lead CRM inbox in <code>/admin</code></td>
                 <td class="num-col">+$280 USD</td>
               </tr>
               <tr>
-                <td><strong>3. Portal Dinámico Careers ATS &amp; Google Jobs Schema</strong></td>
-                <td>Diseño inspirado en Cardone Ventures, testimonios en video vertical, gestión de vacantes en <code>/admin</code> y marcado Google Jobs</td>
+                <td><strong>3. Dynamic Careers ATS Portal &amp; Google Jobs Schema</strong></td>
+                <td>Cardone-inspired Careers design, vertical team video testimonials, job posting manager in <code>/admin</code>, and Google Jobs schema</td>
                 <td class="num-col">+$220 USD</td>
               </tr>
               <tr class="total-row">
-                <td><strong>SUBTOTAL MÓDULOS OPCIONALES</strong></td>
-                <td><strong>Automatización comercial, portafolios y reclutamiento completo</strong></td>
+                <td><strong>OPTIONAL MODULES SUBTOTAL</strong></td>
+                <td><strong>Complete portfolio, estimating pipeline, and recruitment automation</strong></td>
                 <td class="num-col" style="color: var(--primary)"><strong>+$850 USD</strong></td>
               </tr>
             </tbody>
           </table>
 
-          <h3 class="doc-h3">Inversión Total y Esquema de Pagos</h3>
+          <h3 class="doc-h3">Total Investment Summary &amp; Payment Schedule</h3>
           <ul class="doc-list">
-            <li><strong>Proyecto Completo (Autonomía y Automatización Total):</strong> <strong>$2,300 USD</strong> <em>(Pago único)</em></li>
-            <li><strong>Versión Esencial (Plataforma Base + Team 360° + AI Blog Studio):</strong> <strong>$1,450 USD</strong> <em>(Pago único)</em></li>
-            <li><strong>Costo de Mantenimiento de Servidores:</strong> <strong>$0 USD / mes</strong> <em>(Ahorro directo de ~$360–$600 USD/año de SiteGround)</em>.</li>
-            <li><strong>Esquema de Pagos:</strong> <strong>30% Anticipo</strong> al iniciar ($690 USD completo / $435 USD esencial) y <strong>70% Contra Entrega</strong> y validación final ($1,610 USD completo / $1,015 USD esencial).</li>
+            <li><strong>Full Turnkey Suite (Base Platform + All 3 Optional Modules):</strong> <strong>$2,300 USD</strong> <em>(One-time payment)</em></li>
+            <li><strong>Essential Core Package (Base Platform + Team 360° CMS + AI Blog Studio):</strong> <strong>$1,450 USD</strong> <em>(One-time payment)</em></li>
+            <li><strong>Monthly Server / Hosting Maintenance Cost:</strong> <strong>$0 USD / month</strong> <em>(Direct savings of ~$360–$600 USD/year in SiteGround fees)</em>.</li>
+            <li><strong>Payment Schedule:</strong> <strong>30% Deposit</strong> upon kickoff ($690 USD Full Suite / $435 USD Essential Core) and <strong>70% Upon Final Delivery</strong> ($1,610 USD Full Suite / $1,015 USD Essential Core).</li>
           </ul>
         </div>
       </article>
@@ -1774,10 +1763,10 @@
         document.getElementById("entregaAmount").textContent = fmt(Math.round(total * 0.7));
         document.getElementById("packageLabel").textContent =
           count === 3
-            ? "Proyecto Completo (Autonomía y Automatización Total)"
+            ? "Full Turnkey Suite (Complete Autonomy & Automation)"
             : count === 0
-              ? "Versión Esencial (Plataforma Base + Team 360° + AI Blog Studio)"
-              : `Plataforma Base + ${count} módulo(s) opcional(es)`;
+              ? "Essential Core Package (Base Platform + Team 360° + AI Blog Studio)"
+              : `Base Platform + ${count} Optional Module(s)`;
       }
     </script>
   </body>
