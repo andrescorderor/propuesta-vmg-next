@@ -846,24 +846,111 @@
         border: 1px solid var(--border);
       }
 
+      /* Responsive Tables & Interactive Hover Sheen */
+      .stat-card, .phase-card, .module-toggle {
+        position: relative;
+        overflow: hidden;
+      }
+      .stat-card::after, .phase-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -130%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.14), rgba(231, 0, 0, 0.08), transparent);
+        transform: skewX(-20deg);
+        transition: left 0.7s var(--ease);
+        pointer-events: none;
+      }
+      .stat-card:hover::after, .phase-card:hover::after {
+        left: 155%;
+      }
+      .reveal-card {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+      }
+      .reveal-card.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .doc-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
       @media (max-width: 980px) {
         html { scroll-snap-type: none; }
         .left-rail {
-          position: static;
+          position: sticky;
+          top: 0;
           width: 100%;
+          padding: 14px 16px;
           border-right: none;
           border-bottom: 1px solid var(--border);
+          z-index: 150;
+          gap: 10px;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
         }
+        .rail-top {
+          gap: 10px;
+        }
+        .brand-block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0;
+        }
+        .rail-nav-label { display: none; }
+        .rail-nav {
+          flex-direction: row;
+          overflow-x: auto;
+          padding-bottom: 4px;
+          gap: 6px;
+          scrollbar-width: none;
+        }
+        .rail-nav::-webkit-scrollbar { display: none; }
+        .rail-link {
+          white-space: nowrap;
+          padding: 6px 10px;
+          font-size: 0.74rem;
+          border-left: none;
+          border-bottom: 2px solid transparent;
+          background: rgba(24, 24, 28, 0.04);
+        }
+        .rail-link.active {
+          border-left-color: transparent;
+          border-bottom-color: var(--primary);
+        }
+        .rail-bottom {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 8px;
+          gap: 8px;
+        }
+        .rail-controls { flex-shrink: 0; }
+        .btn-demo { flex: 1; font-size: 0.68rem; }
         .progress-bar { left: 0; }
         .deck-view, .formal-doc-wrapper {
           margin-left: 0;
           width: 100%;
         }
+        .slide {
+          min-height: auto;
+          padding: 36px 18px;
+        }
         .telemetry-strip, .hero-kpi-bar, .timeline-grid, .doc-meta-grid { grid-template-columns: 1fr; }
         .col-3, .col-4, .col-5, .col-6, .col-7, .col-8 { grid-column: span 12; }
-        .slide-header { flex-direction: column; align-items: flex-start; }
+        .slide-header { flex-direction: column; align-items: flex-start; gap: 12px; }
         .header-sub { text-align: left; }
-        .formal-sheet { padding: 28px 20px; }
+        .formal-sheet { padding: 24px 16px; }
+        .doc-letterhead { flex-direction: column; gap: 12px; }
+        .doc-meta-box { text-align: left; }
+        .hero-title { font-size: clamp(2.2rem, 9vw, 3.8rem); }
+        .section-title { font-size: clamp(1.8rem, 7vw, 2.8rem); }
       }
     </style>
   </head>
@@ -1768,6 +1855,27 @@
               ? "Essential Core Package (Base Platform + Team 360° + AI Blog Studio)"
               : `Base Platform + ${count} Optional Module(s)`;
       }
+
+      // Staggered Scroll-Reveal for Proposal Deck & Document
+      const animTargets = Array.from(
+        document.querySelectorAll(".stat-card, .phase-card, .hero-kpi, .img-card, .quote-box, .module-toggle")
+      );
+      animTargets.forEach((el, idx) => {
+        el.classList.add("reveal-card");
+        el.style.transitionDelay = `${(idx % 4) * 65}ms`;
+      });
+      const deckObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              deckObs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      animTargets.forEach((el) => deckObs.observe(el));
     </script>
   </body>
 </html>
