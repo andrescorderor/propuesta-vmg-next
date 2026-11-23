@@ -1131,15 +1131,31 @@
               <p class="stat-desc">Automated in-browser WebP compression (~150 KB/photo) for portraits, blogs, and project galleries.</p>
             </div>
 
-            <div class="stat-card col-12" style="padding: 18px 22px; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap">
-              <div style="display: flex; align-items: center; gap: 14px">
-                <span class="badge">Audit Resolved</span>
-                <strong style="font-size: 0.92rem">Exact same visual design VMG NeXT trusts—10x more powerful under the hood</strong>
+            <div class="stat-card col-12" style="padding: 16px 20px; gap: 12px">
+              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px">
+                <div style="display: flex; align-items: center; gap: 12px">
+                  <span class="badge">What Changes vs. Today</span>
+                  <strong style="font-size: 0.9rem">Direct Advantage Over Current <code>vmgnext.com</code> WordPress Setup</strong>
+                </div>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--primary); font-weight: 700">100% Ownership · Zero Lock-In</span>
               </div>
-              <div class="chip-list">
-                <span class="chip">✓ Zero vulnerable plugins</span>
-                <span class="chip">✓ Instant video &amp; gallery loading</span>
-                <span class="chip">✓ Automated Schema.org JSON-LD SEO</span>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; font-size: 0.78rem; line-height: 1.4">
+                <div style="padding: 10px 12px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border)">
+                  <div style="font-weight: 700; color: var(--ink); margin-bottom: 3px">Hosting &amp; Plugin Fees</div>
+                  <div style="color: var(--text-muted)"><strong>Today:</strong> ~$360–$600/yr SiteGround<br><strong style="color: #15803d">New:</strong> $0/mo GitHub + Firebase Spark</div>
+                </div>
+                <div style="padding: 10px 12px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border)">
+                  <div style="font-weight: 700; color: var(--ink); margin-bottom: 3px">Security &amp; Speed</div>
+                  <div style="color: var(--text-muted)"><strong>Today:</strong> PHP <code>updater.php</code> exploit risk<br><strong style="color: #15803d">New:</strong> 0% PHP static edge build (&lt;1s)</div>
+                </div>
+                <div style="padding: 10px 12px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border)">
+                  <div style="font-weight: 700; color: var(--ink); margin-bottom: 3px">Team &amp; Services Editing</div>
+                  <div style="color: var(--text-muted)"><strong>Today:</strong> Raw Swiper HTML &amp; cache purge<br><strong style="color: #15803d">New:</strong> Visual <code>/admin</code> + Services Bento Cards</div>
+                </div>
+                <div style="padding: 10px 12px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border)">
+                  <div style="font-weight: 700; color: var(--ink); margin-bottom: 3px">Blog &amp; Lead Capture</div>
+                  <div style="color: var(--text-muted)"><strong>Today:</strong> 3 manual posts, generic forms<br><strong style="color: #15803d">New:</strong> AI Auto-Publisher + Estimating API</div>
+                </div>
               </div>
             </div>
           </div>
@@ -1579,7 +1595,7 @@
 
         <!-- 1. Executive Summary & Audit -->
         <div class="doc-section" id="d1">
-          <h2 class="doc-h2">1. Executive Summary &amp; Deep Audit of Current WordPress Site (vmgnext.com)</h2>
+          <h2 class="doc-h2">1. Executive Summary &amp; What Improves vs. Current Site (vmgnext.com)</h2>
           <ul class="doc-list">
             <li>
               <strong>Critical PHP Security Vulnerability (<code>updater.php</code> Backdoor):</strong> Our audit identified a self-healing PHP backdoor injection in the current WordPress installation (<code>updater.php</code> injected inside <code>header.php</code>). Migrating to a compiled <strong>React 19 + TypeScript</strong> application with zero server-side PHP execution permanently eliminates 100% of PHP malware risks.
@@ -1594,14 +1610,58 @@
               <strong>Elimination of Fixed Hosting Costs ($0 USD / month):</strong> Replaces SiteGround annual managed hosting (~$360–$600 USD/year) and recurring developer fees for routine content updates.
             </li>
           </ul>
+
+          <h3 class="doc-h3">Direct Side-by-Side Benefit: Today vs. New Platform</h3>
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th>Capability</th>
+                <th>Current Site (<code>vmgnext.com</code> Today)</th>
+                <th>New VMG NeXT Platform (Included)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Security &amp; Speed</strong></td>
+                <td>WordPress/PHP plugins + <code>updater.php</code> risk</td>
+                <td>Compiled React 19 + TypeScript (0% PHP) on Global Edge CDN</td>
+              </tr>
+              <tr>
+                <td><strong>Recurring Costs</strong></td>
+                <td>~$360–$600/yr SiteGround hosting + maintenance fees</td>
+                <td><strong>$0 USD / month</strong> perpetual hosting &amp; Firestore Spark tier</td>
+              </tr>
+              <tr>
+                <td><strong>Navbar &amp; Services UX</strong></td>
+                <td>Static WP navbar + plain alternating <code>/services</code> blocks</td>
+                <td>Sticky frosted architectural pill navbar + <strong>Services Bento Cards</strong> with direct scope CTAs</td>
+              </tr>
+              <tr>
+                <td><strong>Team Updates</strong></td>
+                <td>Hardcoded Swiper HTML + ACF pages + <code>SG Cache</code> flush</td>
+                <td><strong>Team 360° Visual CMS</strong>: 1-click hide/show, bios &amp; auto-WebP photos</td>
+              </tr>
+              <tr>
+                <td><strong>Blog Publishing</strong></td>
+                <td>Manual WP posts (3 since Dec 2025) + basic post styling</td>
+                <td><strong>AI Auto-Publisher + Split Live Preview Composer</strong> &amp; Editorial Field Journal</td>
+              </tr>
+              <tr>
+                <td><strong>Estimating Pipeline</strong></td>
+                <td>Generic email forms with no scope/SF tracking</td>
+                <td>Direct <strong>Estimating API (<code>ocv1_...</code>)</strong> + <code>/admin</code> Lead CRM</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <!-- 2. Exact 1:1 Visual Replica -->
         <div class="doc-section" id="d2">
-          <h2 class="doc-h2">2. Exact 1:1 Visual Replica &amp; Migrated Brand Assets</h2>
+          <h2 class="doc-h2">2. Brand Preservation &amp; Upgraded Public Experience</h2>
           <ul class="doc-list">
-            <li><strong>Home &amp; Services (<code>/</code>, <code>/services</code>):</strong> Original VMG NeXT stylesheets, responsive desktop/mobile hero videos, animated counters (220+ projects, 20 years of expertise, 100% customer satisfaction), all 6 active concrete divisions plus <em>High-End Homes</em> toggleable in 1 click, and dual continuous testimonial carousels.</li>
+            <li><strong>Home, Sticky Navbar &amp; Redesigned Services (<code>/</code>, <code>/services</code>):</strong> Original VMG NeXT brand identity elevated with a shrinking sticky frosted obsidian navbar, responsive desktop/mobile hero videos, animated counters (220+ projects, 20 years of expertise, 100% customer satisfaction), quick-jump division pills, redesigned <strong>Architectural Bento Service Cards</strong> with 2-column capability tiles and direct scope estimate triggers, and dual continuous testimonial carousels.</li>
             <li><strong>Projects Portfolio (<code>/projects</code>):</strong> All 8 commercial concrete projects (<em>Tow/Plow Manila, Tow/Plow Tabiona, Promontory Place Apartments, K&amp;B Apartments, Timpview High School $5M–$5.5M, Ogden 5 Light Bay, Canyon Creek Fairfield Inn &amp; Suites, and The Grove Buildings 1 &amp; 2</em>) with budget ranges, <code>SF</code>, <code>GC</code>, and a 130+ photo full-screen Lightbox gallery.</li>
+            <li><strong>Editorial Field Journal (<code>/blog</code>, <code>/blog/:slug</code>):</strong> Featured lead article spotlight, category &amp; keyword live search, reading progress bar, executive typography, SEO keyword tags, and related insights strip.</li>
             <li><strong>About Us &amp; Restoration Division (<code>/about-us</code>, <code>/restoration</code>):</strong> Brandon M. Dawson card, Mission &amp; Vision ($125M / 360 team members), 6 Core Values, and an interactive filterable Restoration Gallery with all 29 real restoration photos.</li>
             <li><strong>Careers Portal Inspired by Cardone Ventures (<code>/careers</code>):</strong> Video hero, culture KPIs, 6 employee benefits, open positions with Google Jobs <code>JobPosting</code> Schema.org markup, direct resume dispatch to Yolanda Galvan, and the 3 vertical team video testimonials (<em>Valerie, Victor, and Scott</em>).</li>
           </ul>
